@@ -1,0 +1,17 @@
+{
+  "name": "web-crawler-project",
+  "version": "1.0.0",
+  "main": "crawl.js",
+  "scripts": {
+    "test": "jest",
+    "start":"node main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "jest": "^29.7.0",
+    "jsdom": "^26.1.0"
+  }
+}

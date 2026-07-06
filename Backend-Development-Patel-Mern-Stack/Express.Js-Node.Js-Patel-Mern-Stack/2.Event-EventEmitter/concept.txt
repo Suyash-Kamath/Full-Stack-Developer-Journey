@@ -1,0 +1,15 @@
+1. Event:
+An event in Node.js is an occurrence or a signal that something has happened, such as a user action, a response from a server, or a system action like reading a file or completing a task.
+
+For example:
+
+A click event when a button is pressed.
+A data event when data is received from a stream.
+An error event when something goes wrong.
+
+Events allow us to handle actions and respond to them as needed.
+
+2. EventEmitter:
+An EventEmitter is an object in Node.js that enables communication between different parts of the application. It provides methods to emit events (triggering the event) and listen to events (reacting to the event when it occurs).
+
+In simpler terms, an EventEmitter is like a messenger that helps you broadcast messages (events) and allows other parts of your application to respond when the message (event) occurs.

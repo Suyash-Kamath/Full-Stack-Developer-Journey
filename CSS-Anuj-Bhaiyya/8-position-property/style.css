@@ -1,0 +1,55 @@
+body {
+    color: white;
+}
+
+.container {
+    width: 300px;
+    height: 600px;
+    background-color: gainsboro;
+    margin: 100px;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+}
+
+.red {
+    position: relative;
+    background-color: red;
+    top: 100px;
+    left: 100px;
+}
+
+.green {
+    background-color: green;
+    position: absolute;
+    /* absolute likhne se html ke flow se bahar chala jaata hai , it is jsut floating  , blue box upar aya , aisa lagta hai ki green box kabhi tha hi nahi
+    parent is not always html / root element of absolute
+    
+    absolute is relative to that parent which set its position as relative 
+    if not find out then html ko parent banata hai yeh
+    */
+    bottom: 0;
+    right: 0;
+    z-index: 3;
+}
+
+.blue {
+    background-color: blue;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 2;
+}
+
+.purple {
+    background-color: purple;
+    position: sticky;
+    /* jaisehi parent aapke view se bahar jata hai ,same ye bhi bahar jaata hai , stick rahegaa, jaise parent upar gayaa, ye bhi upar jaayega */
+    top: 50px;
+}
+
+.spacer {
+    height: 300vh;
+}

@@ -1,0 +1,67 @@
+Backend App
+
+app.js ---->  create only server
+controllers/services -----> Business Logic(Login,Signup,Get Product)
+Routes ---> API's
+Databases -----> database connection
+                model ,schema, blueprint
+
+middleware -------> middleware(authentication , authorisation)
+
+
+
+1. app.js – Creating the Server
+The app.js file typically contains the basic setup and initialization of your Express application. It’s where the server is created, middleware is applied, and routes are linked. Think of it as the main entry point for your application.
+
+Creates the server that listens on a specific port (e.g., port 3000 or 8000).
+Sets up essential middlewares.
+Defines the core structure for handling requests and responses.
+
+
+2. controllers/services – Business Logic (e.g., Login, Signup, Get Product)
+Controllers (sometimes also called services) contain the business logic of the application. They handle the actual processing of data when a route is hit, such as user authentication, product retrieval, etc. They are responsible for defining what happens when a particular API endpoint is accessed.
+
+
+3. routes – API Endpoints
+Routes define the API endpoints that users can interact with. These routes map to specific HTTP methods (GET, POST, PUT, DELETE) and URLs (e.g., /api/users, /api/login). Each route will then call the appropriate controller or business logic.
+
+4. Databases – Database Connection, Model, Schema
+The database layer handles interaction with the database. It contains the connection setup to the database (e.g., MongoDB, MySQL, PostgreSQL) and defines the models and schemas.
+
+Model: A model represents a data structure (like a user, product, etc.) and the operations that can be performed on that structure (e.g., create, read, update, delete).
+Schema: A schema defines the structure of a data model, i.e., the fields, types, and validation rules for the data.
+
+5. middleware – Middleware (Authentication, Authorization)
+Middleware is a function that has access to the request, response, and the next function in the request-response cycle. It's used to modify the request, perform tasks before the route handler is executed, and validate or transform data.
+
+Two common uses of middleware are:
+
+Authentication: Checking if the user is logged in or if the request contains valid credentials (e.g., a JWT token).
+Authorization: Ensuring that the authenticated user has permission to perform a particular action (e.g., is the user an admin?).
+
+
+
+
+Write about MVC
+
+
+MVC stands for Model-View-Controller, which is a software architectural pattern commonly used to design web applications. It separates the application logic into three interconnected components:
+
+Model:
+
+The Model represents the data of the application and the business logic that operates on that data.
+It is responsible for fetching, storing, and updating data from the database.
+It can also include validation and other business rules.
+The Model does not deal with user input or presentation. It simply handles the data and rules behind it.
+View:
+
+The View represents the user interface (UI) of the application.
+It’s responsible for displaying data to the user and sending user input to the Controller.
+In a web application, the view is usually HTML, CSS, and JavaScript (or template engines like EJS, Pug, etc.).
+The View listens for changes in the Model and updates itself to reflect those changes.
+Controller:
+
+The Controller acts as an intermediary between the Model and the View.
+It receives user input from the View (e.g., clicking buttons or submitting forms) and calls methods on the Model to update or fetch data.
+After updating or retrieving data, the Controller might send that data to the View to be rendered or display a message.
+Essentially, the Controller is the "traffic cop" that processes input and determines what happens next in the application.

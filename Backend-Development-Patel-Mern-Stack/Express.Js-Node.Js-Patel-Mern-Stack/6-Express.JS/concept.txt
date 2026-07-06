@@ -1,0 +1,67 @@
+1. What is Express.js?
+Express.js is a lightweight and flexible web application framework for Node.js. It is used to create web servers and APIs. It provides an abstraction over the core Node.js HTTP module and makes building web applications easier by handling routing, middleware, and HTTP utilities.
+
+Key Features:
+Simplifies routing and middleware.
+Provides a robust set of HTTP methods for handling requests and responses.
+Allows easy integration with databases and other tools.
+Supports middleware for handling different aspects like logging, authentication, etc.
+2. What is package.json?
+package.json is a configuration file for Node.js projects. It contains metadata about the project and manages dependencies.
+
+Key Elements in package.json:
+Name: The name of the project.
+Version: The version of the project.
+Dependencies: Libraries the project depends on.
+Scripts: Shortcuts to run commands like start, test, etc.
+Main: The entry point of the project.
+This file is critical for managing and sharing Node.js projects as it keeps track of installed packages and their versions.
+
+3. What is npm?
+npm (Node Package Manager) is the default package manager for Node.js. It allows developers to:
+
+Install packages/libraries.
+Manage project dependencies.
+Publish and share their own packages.
+4. What is npm init?
+npm init is a command used to initialize a new Node.js project. It creates a package.json file in the current directory. This file keeps track of project metadata and dependencies.
+
+When you run npm init, it prompts you with questions (like the project name, version, description, etc.) to customize the package.json file.
+5. What happens behind the scenes of npm init -y?
+The -y flag in npm init skips all the prompts and generates a default package.json file with pre-filled values.
+
+Behind the scenes:
+
+Defaults are applied: It uses default values for all fields (e.g., name, version, entry point).
+File Creation: It creates a package.json file in the current directory.
+Content: The generated file looks something like this:
+json
+Copy code
+{
+  "name": "your-project-name",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
+What is skipped?:
+
+No interactive questions like project name, description, etc.
+You can later edit the package.json file manually if needed.
+
+
+
+
+What is dependency?
+A dependency is a package required for your project to function in production. These are essential for the app's runtime.
+
+Example: In a web app, express is a dependency because the app cannot run without it.
+
+
+A devDependency is a package needed only during development, not in production. These tools help with tasks like testing, building, or linting the project.
+
+Example: nodemon is a devDependency because it restarts the server during development but isn't needed in production.
